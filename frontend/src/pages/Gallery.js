@@ -13,7 +13,7 @@ export default function Gallery() {
     useEffect(() => {  
         const fetchImages = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/gallery/');
+                const response = await fetch('http://127.0.0.1:9000/gallery/');
                 const data = await response.json();
                 setImages(data);
             } catch (error) {
