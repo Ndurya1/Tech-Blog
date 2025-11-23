@@ -38,6 +38,7 @@ export default function Posts({ posts }) {
                     <div key={post.id} className="post-card">
                         <img src={post.image} />
                         <h3>{post.title}</h3>
+                        <p>{post.summary}</p>
                         <h2>
                             <Link to={`/posts/${post.id}`}>View Full Blog</Link>
                         </h2>

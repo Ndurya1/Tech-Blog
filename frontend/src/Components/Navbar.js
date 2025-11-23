@@ -15,7 +15,7 @@ export default function Navbar() {
             <meta name="description" content="A blog about travel and technology." />
             <meta name="keywords" content="travel, technology, blog, articles, gallery" />
             <meta name="author" content="Ndurya Muhammad" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMtdbHnE5D1l5Yk5o5r5j5j5j5j5j5j5j5j5j5j" crossOrigin="anonymous" />
+         
         </Helmet>
     </HelmetProvider>
     

@@ -38,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: lightgreen;
+  color: orange;
 }
 
 .nav-links {
@@ -52,7 +52,7 @@ body {
 }
 
 .nav-links  a{
-  color: lightgreen;
+  color:orange;
   text-decoration: none;
   font-size: 1.2rem;
   gap: 20px;
@@ -177,6 +177,60 @@ body {
   color: grey;
   font-size: 1.2rem;
   line-height: 1.6;
+}
+/* blog info section */
+.bloginfo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bloginfocontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0px;
+  margin: 26px auto;
+  width: 900px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px grey;
+}
+.blogtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  top: 0;
+  flex: 1;
+  text-align: left;
+  padding: 12px;
+
+}
+.blogimg{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media(max-width:650px){
+  .bloginfocontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 400px;
+  }
+  .bloginfocontainer img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .blogtext h2{
+    font-size: 1.2em;
+  }
+  .blogtext p{
+    font-size: 14px;
+  }
 }
 /* footer section */
 .footer {
@@ -337,7 +391,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(245, 245, 245, 0.685);
+  background-color: rgba(0, 0, 0, 0.139);
   background-blend-mode: soft-light;
   display: flex;
   flex-direction: column;
@@ -353,7 +407,7 @@ body {
   font-size:3.9em;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
-  color: rgb(85, 11, 154);
+  color: orange;
 }
 .hero h1 span{
   color: white;
@@ -361,6 +415,7 @@ body {
 .hero p{
   font-size: 1.8em;
   font-weight: 600;
+  color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.4em;
 }
@@ -395,6 +450,127 @@ body {
   }
   .hero p{
     font-size: 1.3em;
+  }
+}
+
+/* contact section */
+.contact-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin:  30px auto;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 0px 1px rgb(196, 187, 187);
+  gap: 12px;
+  width: 700px;
+
+}
+.contact-sec-text{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+  line-height: 1.6em;
+}
+.contact-sec-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  line-height: 1.4em;
+  
+}
+.contact-sec-form input{
+  width: 300px;
+  border-radius: 5px;
+  border: .2px solid black;
+  padding: 12px 10px;
+}
+.contact-sec-form textarea{
+  width: 300px;
+  border-radius: 5px;
+  border: .2px solid black;
+  padding: 12px 10px;
+}
+.contact-sec-form button{
+  width: 400px;
+  border-radius: 5px;
+  border: .2px solid black;
+  padding: 5px 10px;
+  color: white;
+  background: black;
+  object-fit: cover;
+  font-size: 17px;
+}
+.contact-sec-form button:hover{
+  background-color: orange;
+  color: black;
+}
+
+/* articles page (another copy of the posts page) */
+.article-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+  width: 350px;
+  margin: 12px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px grey;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+.article-container:hover{
+  transform: translateY(4px);
+}
+.article-container img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+.article-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  margin: 1px 8px;
+  line-height: 1.6em;
+  gap: 12px;
+  cursor: pointer;
+}
+.article-container a{
+  text-decoration: none;
+  color: white;
+}
+.article-container h5{
+  background: black;
+  padding: 5px 3px;
+  object-fit: cover;
+  margin: 4px 5px;
+  width: 250px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform .3s ease-in-out;
+
+}
+.article-container h5:hover{
+  transform: translateY(-4px);
+}
+@media(max-width:768px){
+  .article-container{
+    width: 300px;
+  }
+  .article-text{
+    font-size: 14px;
+  }
+  .article-container img{
+    width: 300px;
   }
 }
 
