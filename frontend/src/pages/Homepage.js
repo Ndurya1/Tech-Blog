@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import Posts from "./Posts";
@@ -32,18 +32,10 @@ export default function Homepage() {
     }, []);
 
     return (
-        <>
-            <HelmetProvider>
-                <Helmet>
-                    <title>Travel & Tech Blog Homepage</title>
-                    <meta name="description" content="A blog about travel and technology. want to read through the mind of a travelling techie? i gat you! follow along to get the latest tech news and travel adventures" />
-                    <meta name="keywords" content="travel, technology, AI, blogs, gallery" />
-                    <meta name="author" content="Ndurya Muhammad" />
-                   
-                </Helmet>
-            </HelmetProvider>
+        <div className="home-scroll">
+           
             
-            <div >
+            <div className="scroll">
                 <Hero_section/>
               
             </div>
@@ -87,11 +79,12 @@ export default function Homepage() {
                 <Posts posts={posts.slice(0, 4)} />
             </div>
 
-            <About />
-            <Contacts/>
+            <div className="scroll">  <About /></div>
+          
+           <div className="scroll" > <Contacts/></div>
 
            
-            <Footer />
-        </>
+            <div className="scroll"><Footer /></div>
+        </div>
     );
 }

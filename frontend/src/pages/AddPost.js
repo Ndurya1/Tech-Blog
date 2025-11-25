@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet, HelmetProvider } from 'react-helmet-async';    
+  
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ export default function AddPost() {
 
     const [image, setImage] =useState("")
      const [title, setTitle] =useState("")
+     const [summary, setSummary] =useState("")
     const [content, setContent] =useState("")
     
 
@@ -17,6 +18,7 @@ export default function AddPost() {
         let formField = new FormData()
 
         formField.append('title', title)
+        formField.append('summary', summary)
         formField.append('content', content)
     
         if(image !== null) {
@@ -34,13 +36,7 @@ export default function AddPost() {
 
     return (
         <>
-            <HelmetProvider>    
-            <Helmet>
-                <title>Add Post</title>
-                <meta name="description" content="Add a new blog post" />
-                <meta name="keywords" content="blog, tech, travel, add post, new post" />
-            </Helmet>       
-            </HelmetProvider>
+          
 
             <h1>Add Post</h1>
             <div className="AddPostContainer">
@@ -53,7 +49,14 @@ export default function AddPost() {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}/>
                 </div>
-
+                <div className="Add-Post-form">
+                    <input
+                    type="text"
+                    placeholder="Enter blog summary"
+                    name="summary"
+                    value={summary}
+                    onChange={(e) => setSummary(e.target.value)}/>
+                </div>
                 <div className="Add-Post-form">
                     <textarea
                     placeholder="Enter blog content"

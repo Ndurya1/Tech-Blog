@@ -1,6 +1,6 @@
 import React from "react";  
 import { useParams } from "react-router-dom";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 import axios from "axios";
 import { useState, useEffect } from "react";    
 
@@ -23,11 +23,7 @@ export default function PostsDetails() {
     if (!post) {
         return (
             <div>
-                <HelmetProvider>
-                    <Helmet>
-                        <title>Loading...</title>
-                    </Helmet>
-                </HelmetProvider>
+              
                 <h1>Loading...</h1>
                 <p>Please wait while the post loads.</p>
             </div>
@@ -36,11 +32,7 @@ export default function PostsDetails() {
 
     return (
         <div>
-            <HelmetProvider>
-                <Helmet>
-                    <title>{post.title}</title>
-                </Helmet>
-            </HelmetProvider>
+           
            
             <h1>{post.title}</h1>
             <p>{post.content}</p>

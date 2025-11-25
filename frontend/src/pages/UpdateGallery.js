@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet, HelmetProvider } from 'react-helmet-async';    
+ 
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -32,13 +32,7 @@ export default function UpdateGallery() {
 
     return (
         <>
-            <HelmetProvider>    
-            <Helmet>
-                <title>Update Gallery</title>
-                <meta name="description" content="Update the gallery" />
-                <meta name="keywords" content="gallery, update, image" />
-            </Helmet>       
-            </HelmetProvider>
+           
 
             <h1>Update Gallery</h1>
             <div className="UpdateGalleryContainer">

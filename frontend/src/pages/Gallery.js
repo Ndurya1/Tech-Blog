@@ -1,6 +1,4 @@
 import React from "react";
-import { HelmetProvider } from "react-helmet-async";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import {useState, useEffect} from "react";
@@ -24,13 +22,7 @@ export default function Gallery() {
     }, []);
 
     return (
-        <HelmetProvider>
-            <Helmet>
-                <title>Gallery Page</title>
-                <meta name="description" content="A collection of beautiful images." />
-                <meta name="keywords" content="gallery, images, travel, technology" />
-                <meta name="author" content="Ndurya Muhammad" />
-            </Helmet>
+       
             <div>
                 
                 <h1>Gallery Page</h1>
@@ -41,7 +33,7 @@ export default function Gallery() {
                     </div>
                 ))}
             </div>
-        </HelmetProvider>
+      
     );
 }
 

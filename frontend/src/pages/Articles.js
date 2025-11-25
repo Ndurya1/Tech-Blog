@@ -1,43 +1,41 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 import axios from "axios";
 import travel from '../Assets/travel.jpg'
 
-export default function Articles(){
+export default function Articles({posts}){
 
-  const [article, setArticle] = useState([]);
+    const [allPosts, setAllPosts] = useState([]);
 
-  useEffect(()=>{
-    const fetchArticle=async()=>{
-     try {
-        const response= await axios.get(`http://127.0.0.1:9000/blog/`, setArticle)
-     } catch (error) {
-      console.error("error fetching articles", error);
-      
-     }
-    }; 
-    fetchArticle();
-  
-  },[]);
+    useEffect(() => {
+        if (!posts) {
+            const fetchPosts = async () => {
+                try {
+                    const response = await axios.get(`http://127.0.0.1:9000/blog/`);
+                    setAllPosts(response.data);
+                } catch (error) {
+                    console.error("Error fetching posts:", error);
+                }
+            };
+            fetchPosts();
+        }
+    }, [posts]);
 
-    
-
-  
+    const displayPosts = posts ? posts : allPosts;
 
     return(
         <>
-          <div key={post.id} className="article-container">
-             <img src={travel} alt="travel destination in morrocco" width={350} height={200} />
-             <p>{post.image}</p>
+          {Array.isArray(displayPosts) && displayPosts.map((post) => (
+          <div  className="article-container" key={post.id}>
+            <img src={post.image} width={350} height={200}/>
              <div className="article-text">
-                <h2> Planning to travel? here's what you should know {post.title}</h2>
-                
-                <p>You dont just wake up and trael to a place. you start by doing research, budgeting for accommodation, transport etc. this article is a perfect guide  for people planning to go on vacations</p>
-                <p>{post.summary}</p>
+             <h2>{post.title}</h2>
+             <p>{post.summary}</p>
              </div>
              <h5><Link to="/PostsDetails" >View Article </Link></h5>
           </div>
+          ))}
         </>
     )
 }

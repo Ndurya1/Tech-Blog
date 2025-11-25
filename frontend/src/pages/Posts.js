@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 import axios from "axios";
 import Navbar from "../Components/Navbar";
 
@@ -25,11 +25,7 @@ export default function Posts({ posts }) {
 
     return (
         <div>
-            <HelmetProvider>
-                <Helmet>
-                    <title>Posts</title>
-                </Helmet>
-            </HelmetProvider>
+          
             
 
             <h1>Posts</h1>
@@ -37,8 +33,9 @@ export default function Posts({ posts }) {
                 {Array.isArray(displayPosts) && displayPosts.map((post) => (
                     <div key={post.id} className="post-card">
                         <img src={post.image} />
-                        <h3>{post.title}</h3>
-                        <p>{post.summary}</p>
+
+                       <div className="article-text"> <h3>{post.title}</h3>
+                        <p>{post.summary}</p></div>
                         <h2>
                             <Link to={`/posts/${post.id}`}>View Full Blog</Link>
                         </h2>

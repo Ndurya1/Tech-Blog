@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 export default function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,15 +9,7 @@ export default function Navbar() {
    
   return (
     <>
-    <HelmetProvider>
-        <Helmet>
-            <title>Travel & Tech Blog</title>
-            <meta name="description" content="A blog about travel and technology." />
-            <meta name="keywords" content="travel, technology, blog, articles, gallery" />
-            <meta name="author" content="Ndurya Muhammad" />
-         
-        </Helmet>
-    </HelmetProvider>
+   
     
       <div className="navbar-container">
         <header className='navbar-header'>
