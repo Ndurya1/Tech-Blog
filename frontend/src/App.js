@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import Hero_section from './Components/Hero_section';
 import Contacts from './Components/Contacts';
 import Articles from './pages/Articles';
+import AxiosInstance from './Components/AxiosInstance';
 import { Axios } from 'axios';
 
 
