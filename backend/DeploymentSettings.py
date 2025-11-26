@@ -26,7 +26,8 @@ MIDDLEWARE = [
 DEBUG = False
 
 CORS_ALLOW_ALL_ORIGINS =[
-    "https://travel-and-tech.onrender.com"
+    "https://travel-and-tech.onrender.com",
+    "https://travel-tech-backend-kb51.onrender.com"
 
 ]
 
