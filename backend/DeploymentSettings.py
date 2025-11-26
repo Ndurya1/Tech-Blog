@@ -6,6 +6,8 @@ from backend. settings import BASE_DIR
 ALLOWED_HOSTS =[os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 CRSF_TRUSTED_ORIGINS =['https://' +os.environ.get('RENDER_EXTERNAL_HOSTNAME') ]
 
+SECRET_KEY = os.environ.get["SECRET_KEY"]
+
 
 
 MIDDLEWARE = [
@@ -23,9 +25,10 @@ MIDDLEWARE = [
 
 DEBUG = False
 
-#CORS_ALLOW_ALL_ORIGINS =[
+CORS_ALLOW_ALL_ORIGINS =[
+    "https://travel-and-tech.onrender.com"
 
-#]
+]
 
 STORAGES = [
    "default": {
@@ -43,4 +46,4 @@ DATABASES ={
         default= os.environ['DATABASE_URL']
         conn_max_age= 600
     )
-}
+         }
