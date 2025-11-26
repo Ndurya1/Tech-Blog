@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import Hero_section from './Components/Hero_section';
 import Contacts from './Components/Contacts';
 import Articles from './pages/Articles';
+import { Axios } from 'axios';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/Hero_section' element={<Hero_section/>} />
         <Route path='/Contacts' element={<Contacts/>}/>
         < Route path='/Articles' element={<Articles/>}/>
+        < Route path='/AxiosInstance' element={<AxiosInstance/>}/>
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>
