@@ -31,10 +31,17 @@ export default function PostsDetails() {
     }
 
     return (
-        <div>
+        <div style={{display:"flex",
+            flexDirection:"column",
+            justifyContent:"center",
+            alignItems:"center",
+            width:"800px",
+            margin:"auto"
+        }}>
            
            
             <h1>{post.title}</h1>
+            <p>{post.image}</p>
             <p>{post.content}</p>
         </div>
     );

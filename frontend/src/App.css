@@ -598,13 +598,13 @@ body {
 }
 @media(max-width:768px){
   .article-container{
-    width: 300px;
+    width: 280px;
   }
   .article-text{
     font-size: 14px;
   }
   .article-container img{
-    width: 300px;
+    width: 280px;
   }
 }
 
