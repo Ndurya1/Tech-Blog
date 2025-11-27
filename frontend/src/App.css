@@ -454,6 +454,11 @@ body {
   .hero p{
     font-size: 1.3em;
   }
+  .hero .buttons{
+    flex-direction: column;
+    width: 220px;
+    gap: 8px;
+  }
 }
 
 /* contact section */
@@ -527,7 +532,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: left;
-    width: 330px;
+    width: 300px;
     gap: 12px;
     padding: 12px;
   
