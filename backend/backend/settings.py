@@ -19,6 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Media files (uploads)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_FULL_URL = 'https://travel-tech-backend-kb51.onrender.com'
 
 
 # Quick-start development settings - unsuitable for production
@@ -79,6 +80,7 @@ MIDDLEWARE = [
 ]
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'backend.urls'
 

@@ -1,12 +1,12 @@
 import os
 import dj_database_url
-from backend .settings. import *
-from backend. settings import BASE_DIR
+from backend.settings import *
+from backend.settings import BASE_DIR
 
 ALLOWED_HOSTS =[os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 CRSF_TRUSTED_ORIGINS =['https://' +os.environ.get('RENDER_EXTERNAL_HOSTNAME') ]
 
-SECRET_KEY = os.environ.get["SECRET_KEY"]
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 
@@ -31,20 +31,20 @@ CORS_ALLOW_ALL_ORIGINS =[
 
 ]
 
-STORAGES = [
+STORAGES = {
    "default": {
-        "BACKEND": "django.core.files.storage.fileSystemStorage",
-   };
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+   },
 
-   "static files":{
-       "BACKEND":"Whitenoise.Storage.CompressedStaticFilesStorage",
-   };
+   "staticfiles":{
+       "BACKEND":"whitenoise.storage.CompressedStaticFilesStorage",
+   },
 
-]
+}
 
-DATABASES ={
+DATABASES = {
     'default': dj_database_url.config(
-        default= os.environ['DATABASE_URL']
-        conn_max_age= 600
+        default=os.environ['DATABASE_URL'],
+        conn_max_age=600
     )
-         }
+}
