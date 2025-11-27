@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logoIcon from '../Assets/T&T-icon.png'
+
 
 export default function Navbar() {
 
@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="navbar-container">
         <header className='navbar-header'>
             <div className="navbar-logo" style={{display:"flex"}}>
-                  <img src={logoIcon} alt="logo" width={70} height={70} style={{marginRight:"8px"}}/>
+                  
                   <h1>Travel & Tech</h1>
             </div>
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
