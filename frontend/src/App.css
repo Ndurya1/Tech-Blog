@@ -219,7 +219,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 5px auto;
-    width: 400px;
+    width: 350px;
   }
   .bloginfocontainer img{
     width: 100%;
@@ -454,17 +454,18 @@ body {
 }
 
 /* contact section */
+
 .contact-section{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin:  30px auto;
-  padding: 22px;
+  margin:  13px 30px ;
+  padding: 2px;
   border-radius: 8px;
   box-shadow: 0px 1px 0px 1px rgb(196, 187, 187);
   gap: 12px;
-  width: 700px;
+  width: 600px;
 
 }
 .contact-sec-text{
@@ -496,7 +497,7 @@ body {
   padding: 12px 10px;
 }
 .contact-sec-form button{
-  width: 400px;
+  width: 250px;
   border-radius: 5px;
   border: .2px solid black;
   padding: 5px 10px;
@@ -508,6 +509,38 @@ body {
 .contact-sec-form button:hover{
   background-color: orange;
   color: black;
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+@media(max-width:768px){
+  .contact-section{
+    display: block;
+    flex-direction: column;
+    margin: 5px 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: left;
+    width: 330px;
+    gap: 12px;
+    padding: 12px;
+  
+  }
+  .contact-sec-text{
+    max-width: 100%;
+    width: 300px;
+    text-align: left;
+    padding: 4px 4px;
+  }
+  .contact-sec-form{
+    width: 300px;
+  }
+  .contact-sec-form button{
+    width:200px;
+  }
 }
 
 /* articles page (another copy of the posts page) */

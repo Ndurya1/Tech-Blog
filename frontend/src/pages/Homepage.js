@@ -81,7 +81,7 @@ export default function Homepage() {
 
             <div className="scroll">  <About /></div>
           
-           <div className="scroll" > <Contacts/></div>
+           <div className="contacts" > <Contacts/></div>
 
            
             <div className="scroll"><Footer /></div>
