@@ -59,9 +59,9 @@ export default function Contacts({children, delay=0}){
                         viewPort={{once:true, amount:0.9}} className="contact-sec-form flex flex-col justify-center items-center w-full ">
             <form className=" flex flex-col justify-center text-left  w-[330px] text-gray-700 border-2 border-green-600 rounded-lg p-4">
                 <p>Send a whatsApp message:</p>
-                <input type="text"  onChange={handleMessageChange} placeholder="enter your full name" required />
+                <input type="text"  onChange={handleMessageChange} placeholder="name" required />
 
-                <textarea type="text" id="whatsapp_msg" value={message} onChange={handleMessageChange} placeholder="enter your full name" required />
+                <textarea type="text" id="whatsapp_msg" value={message} onChange={handleMessageChange} placeholder="Message" required />
 
                 <button className="bg-green-700 hover:bg-transparent hover:text-black rounded-full" onSubmit={sendToWhatsapp}>Submit</button>
             </form>
