@@ -15,12 +15,15 @@ import Contacts from './Components/Contacts';
 import Articles from './pages/Articles';
 import AxiosInstance from './pages/AxiosInstance';
 import { Axios } from 'axios';
+import BlogView from './pages/BlogView';
+import SolitudeBlog from './pages/SolitudeBlog';
+import TechMap from './pages/TechMap'
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App bg-gray-200">
+    
       
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -33,7 +36,10 @@ function App() {
         <Route path='/Hero_section' element={<Hero_section/>} />
         <Route path='/Contacts' element={<Contacts/>}/>
         < Route path='/Articles' element={<Articles/>}/>
-        < Route path='/AxiosInstance' element={<AxiosInstance/>}/>
+        < Route path='/BlogView' element={<BlogView/>}/>
+        < Route path='/BlogView' element={<BlogView/>}/>
+        < Route path='/TechMap' element={<TechMap/>}/>
+        < Route path='/SolitudeBlog' element={<SolitudeBlog/>}/>
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>

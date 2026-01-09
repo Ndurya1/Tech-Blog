@@ -24,7 +24,7 @@ export default function AddPost() {
         if(image !== null) {
              formField.append('image', image)
         }
-        await axios.post("http://127.0.0.1:9000/blog/", formField, {
+        await axios.post("http://127.0.0.1:8000/blog/", formField, {
     headers: { "Content-Type": "multipart/form-data" }
 })
         .then(response => {
