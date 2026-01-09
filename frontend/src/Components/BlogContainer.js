@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {motion} from 'framer-motion'
 
-export default function BlogContainer({title, summary, author, imageUrl, children, cta}){
+export default function BlogContainer({title, summary, author, imageUrl, children, cta, delay=0}){
     return(
       
-         <div className="flex  justify-center items-center m-auto rounded-lg border-2 border-green-600 shadow-md shadow-gray-700 w-[310px] md:w-[700px] gap-4 md:gap-10 h-full md:pr-10">
+          <motion.div
+          initial={{opacity:0, x:30}}
+                whileInView={{opacity:1, x:0}}
+                transition={{duration:0.9, ease:'easeOut', delay:delay}}
+                viewPort={{once:true, amount:0.9}}
+                 className="flex  justify-center items-center m-auto rounded-lg border-2 border-green-600 shadow-md shadow-gray-700 w-[310px] md:w-[700px] gap-4 md:gap-10 h-full md:pr-10">
 
-         {imageUrl && <img src={imageUrl} alt={title} className="rounded-l-lg w-[130px] h-[197px] object-cover md:w-[200px] "/>}
+         {imageUrl && <img src={imageUrl} alt={title} className="rounded-l-lg w-[130px]  h-[40vh] max-h-full p-2 object-cover md:w-[200px] "/>}
 
          <div className="flex flex-col text-justify p-2 w-full md:w-[420px] ">
             <p className="flex text-center font-bold text-[13px] ">{title}</p>
@@ -23,7 +29,7 @@ export default function BlogContainer({title, summary, author, imageUrl, childre
          </div>
         
        
-       </div>
+       </motion.div>
        
      
     )

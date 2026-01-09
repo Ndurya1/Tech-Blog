@@ -16,6 +16,7 @@ import Solo2 from '../Assets/Solo2.jpg'
 
 import {FiArrowRight} from 'react-icons/fi'
 import { FiChevronsRight } from "react-icons/fi";
+import {motion} from 'framer-motion'
 
 import  { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
@@ -25,7 +26,7 @@ import BlogContainer from "../Components/BlogContainer";
 import BlogViewContainer from "../Components/BlogViewContainer";
 
 
-export default function Homepage() {
+export default function Homepage({children, delay=0}) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -42,7 +43,11 @@ export default function Homepage() {
     }, []);
 
     return (
-        <div className=" " >
+         <motion.div
+          initial={{opacity:0, x:30}}
+                whileInView={{opacity:1, x:0}}
+                transition={{duration:0.9, ease:'easeOut', delay:delay}}
+                viewPort={{once:true, amount:0.3}} className=" scroll-smooth" >
 
             <div className="home-scroll   bg-gray-300 shadow-xl mb-10 ">
             <div className=" absolute z-10 inset-0   ">
@@ -52,17 +57,25 @@ export default function Homepage() {
              <img src={Solo2} alt="tech & travel photo" className="   w-full  absolute h-full rounded-b-[25px] justify-center items-center m-auto  inset-0 shadow-xl shadow-gray-900 object-cover  position-center "  />
            </div>
 
-            <div className="flex flex-col justify-center items-center m-auto p-2 text-white md:flex md:flex-row md:justify-center md:gap-10 md:p-10">
+             <motion.div
+                      initial={{opacity:0, y:70, scale:0.8}}
+                            whileInView={{opacity:1, y:0, scale:1}}
+                            transition={{  duration:0.9, ease:'easeOut', delay:delay}}
+                            viewPort={{once:true, amount:0.9}} className="flex flex-col justify-center items-center m-auto p-2 text-white md:flex md:flex-row md:justify-center md:gap-10 md:p-10">
                <h1 className=" title flex flex-col text-black mt-4 text-[27px] md:text-[30px] font-bold text-justify">The Solitary Lens<br/> <span className="text-[22px] md:text-[26px] text-green-600  ">I write from Solitude, not silence </span></h1>
                   
                 <p className="text-gray-600 md:text-[12px] text-left p-2 md:w-[350px] ">I think best at a distance. Solitude gives me the space to question, to doubt and to refine ideas without pressure. The Solitary Lens is not a reaction to the world, but a careful observation of it - measured, deliberate and quiet.</p>
-             </div>
+             </motion.div>
 
             </div>
            
           
                 
-             <div id="Posts" className="flex flex-col justify-center items-center gap-5 mb-5">
+              <motion.div
+                       initial={{opacity:0, y:70, scale:0.8}}
+                             whileInView={{opacity:1, y:0, scale:1.0}}
+                             transition={{duration:0.9, ease:'easeOut', delay:delay}}
+                             viewPort={{once:true, amount:0.9}} id="Posts" className="flex flex-col justify-center items-center gap-5 mb-5">
                  <BlogContainer 
               
               title='I write in solitude: An account of a loner!  '
@@ -100,7 +113,7 @@ export default function Homepage() {
 
               
 
-             </div>
+             </motion.div>
 
              <div className="flex  justify-center  font-bold text-[15px] items-right gap-2 m-auto  text-left items-left text-gray-900 w-fit ml-[200px] md:ml-[900px]  bg-green-100 px-3 p-1 rounded-full border border-green-700 hover:bg-transparent hover:text-green-600  " >
                  <Link to="/Posts">More</Link> <a href="/Posts"><FiChevronsRight className="flex justify-center items-center mt-1 text-[15px]"/></a>
@@ -112,7 +125,11 @@ export default function Homepage() {
                 <Posts posts={posts.slice(0, 4)} />
             </div> */}
 
-            <div id="About" className="scroll bg-gray-300 shadow-xl md:h-[310px] flex flex-col justify-center items-center mb-5">   <div className=" flex flex-col justify-center items-center max-w-[1000px] p-2 text-left md:flex-row m-auto gap-5 md:justify-center  " >
+             <motion.div
+                      initial={{opacity:0, y:70}}
+                            whileInView={{opacity:1, y:0}}
+                            transition={{duration:0.9, ease:'easeOut', delay:delay}}
+                            viewPort={{once:true, amount:0.9}} id="About" className="scroll bg-gray-300 shadow-xl md:h-[310px] flex flex-col justify-center items-center mb-5">   <div className=" flex flex-col justify-center items-center max-w-[1000px] p-2 text-left md:flex-row m-auto gap-5 md:justify-center  " >
 
                 <div className="flex flex-col justify-center m-auto p-2">
                 <h2 className="text-black text-[20px] font-bold ">About </h2>
@@ -126,12 +143,17 @@ export default function Homepage() {
                 <button className="flex w-[150px] p-3 rounded-lg bg-green-800 text-[15px] font-bold text-gray-200 shadow-xl shadow-gray-400 text-center justify-center hover:bg-transparent hover:text-black hover:border-[1px] hover:border-black cursor-pointer  "> <a href='https://nduryamuhammad.vercel.app'>Portfolio</a></button>
                
                 </div>
-            </div></div>
+            </div>
+            </motion.div>
           
-           <div className="contacts" id="Contacts" > <Contacts/></div>
+            <motion.div
+                     initial={{opacity:0, y:70}}
+                           whileInView={{opacity:1, y:0}}
+                           transition={{duration:0.9, ease:'easeOut', delay:delay}}
+                           viewPort={{once:true, amount:0.9}} className="contacts" id="Contacts" > <Contacts/></motion.div>
 
            <span>  <hr className="border-none p-[0.7px] bg-black w-full "/></span>
             <div className="scroll"><Footer /></div>
-        </div>
+        </motion.div>
     );
 }
