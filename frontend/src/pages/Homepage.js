@@ -102,7 +102,7 @@ export default function Homepage() {
 
              </div>
 
-             <div className="flex  justify-center  font-bold text-[20px] items-right gap-2 m-auto  text-left items-left text-gray-900 w-fit ml-[240px] md:ml-[900px]  bg-green-100 px-3 p-1 rounded-full border border-green-700 hover:bg-transparent hover:text-green-600  " >
+             <div className="flex  justify-center  font-bold text-[15px] items-right gap-2 m-auto  text-left items-left text-gray-900 w-fit ml-[200px] md:ml-[900px]  bg-green-100 px-3 p-1 rounded-full border border-green-700 hover:bg-transparent hover:text-green-600  " >
                  <Link to="/Posts">More</Link> <a href="/Posts"><FiChevronsRight className="flex justify-center items-center mt-1 text-[22px]"/></a>
                   
             </div>
