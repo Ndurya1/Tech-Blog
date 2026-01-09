@@ -12,6 +12,7 @@ import Solitude from '../Assets/solitude.jpg'
 import loner from '../Assets/blog1.jpg'
 import solitary from '../Assets/solitary.jpg'
 import hero from '../Assets/HeroImage.jpg'
+import Solo2 from '../Assets/Solo2.jpg'
 
 import {FiArrowRight} from 'react-icons/fi'
 import { FiChevronsRight } from "react-icons/fi";
@@ -47,7 +48,9 @@ export default function Homepage() {
             <div className=" absolute z-10 inset-0   ">
                   <Navbar />
             </div>
-            <img src={hero} alt="tech & travel photo" className="   w-[345px] h-[405px] md:w-[1000px] md:h-[450px] rounded-b-[25px] justify-center items-center m-auto  relative shadow-xl shadow-gray-900 object-cover   position-center "/>
+           <div  className="  w-[330px] md:w-[1000px] rounded-b-[25px] relative shadow-xl shadow-gray-900 h-[60vh]  m-auto md:h-[80vh] flex items-center justify-center bg-black overflow-hidden">
+             <img src={Solo2} alt="tech & travel photo" className="   w-full  absolute h-full rounded-b-[25px] justify-center items-center m-auto  inset-0 shadow-xl shadow-gray-900 object-cover  position-center "  />
+           </div>
 
             <div className="flex flex-col justify-center items-center m-auto p-2 text-white md:flex md:flex-row md:justify-center md:gap-10 md:p-10">
                <h1 className=" title flex flex-col text-black mt-4 text-[27px] md:text-[30px] font-bold text-justify">The Solitary Lens<br/> <span className="text-[22px] md:text-[26px] text-green-600  ">I write from Solitude, not silence </span></h1>
