@@ -48,7 +48,7 @@ export default function Homepage() {
             <div className=" absolute z-10 inset-0   ">
                   <Navbar />
             </div>
-           <div  className="  w-[330px] md:w-[1000px] rounded-b-[25px] relative shadow-xl shadow-gray-900 h-[60vh]  m-auto md:h-[80vh] flex items-center justify-center bg-black overflow-hidden">
+           <div  className="  w-[300px] md:w-[1000px] rounded-b-[25px] relative shadow-xl shadow-gray-900 h-[60vh]  m-auto md:h-[80vh] flex items-center justify-center bg-black overflow-hidden">
              <img src={Solo2} alt="tech & travel photo" className="   w-full  absolute h-full rounded-b-[25px] justify-center items-center m-auto  inset-0 shadow-xl shadow-gray-900 object-cover  position-center "  />
            </div>
 
